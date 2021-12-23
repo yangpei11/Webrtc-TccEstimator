@@ -44,7 +44,5 @@ AimdRateControl make a reasonable bandwidth from status of current network.
 AcknowledgeBitrateEstimator calcalute a window flow bandwidth rate.
 
 ## Data Flow Chart
-![tcc algorithm](https://github.com/yangpei11/Transport-CC/blob/master/Figure/tcc.png)
-
-<img src="https://github.com/yangpei11/Transport-CC/blob/master/Figure/tcc.png" width = "200" height = "300" alt="" align=center />
+* see Figure FlowChart.png
 
