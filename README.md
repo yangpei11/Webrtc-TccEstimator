@@ -46,8 +46,5 @@ AcknowledgeBitrateEstimator calcalute a window flow bandwidth rate.
 ## Data Flow Chart
 ![tcc algorithm](https://github.com/yangpei11/Transport-CC/blob/master/Figure/tcc.png)
 
-<img src="https://github.com/yangpei11/Transport-CC/blob/master/Figure/tcc.png" width="50%" height="100%">
-
-
-
+<img src="https://github.com/yangpei11/Transport-CC/blob/master/Figure/tcc.png" width = "200" height = "300" alt="" align=center />
 
