@@ -30,6 +30,7 @@ type TransportFeedbackAdapter struct {
 	current_offset    int64
 	last_ack_seq_num_ int64
 	mutex             sync.Mutex
+	sequence_num_unwrapper_ SequenceNumberUnwrapper
 }
 
 type PacketResult struct {
@@ -43,6 +44,7 @@ func NewTransportFeedbackAdapter() TransportFeedbackAdapter {
 		last_timestamp_:   -1,
 		current_offset:    -1,
 		last_ack_seq_num_: -1,
+		sequence_num_unwrapper_: NewSequenceNumberUnwrapper(),
 	}
 }
 
@@ -70,6 +72,7 @@ func (transport_feedback_adpater *TransportFeedbackAdapter) AddPacket(send_packe
 
 	var packet PacketFeedback
 	packet.sent = send_packet
+	packet.sent.sequence_number = transport_feedback_adpater.sequence_num_unwrapper_.Unwrap(uint16(packet.sent.sequence_number))
 	packet.creation_time = creation_time
 
 	for key, value := range transport_feedback_adpater.history_ {
@@ -99,7 +102,7 @@ func (transport_feedback_adpater *TransportFeedbackAdapter) ProcessTransportFeed
 	//ignored := 0
 	packet_offset := int64(0)
 	for index, value := range feedback.RecvDeltas {
-		seq_num := int64(index + int(feedback.BaseSequenceNumber)) //需要warp
+		seq_num := transport_feedback_adpater.sequence_num_unwrapper_.Unwrap(uint16(index + int(feedback.BaseSequenceNumber))) //需要warp
 		if seq_num > transport_feedback_adpater.last_ack_seq_num_ {
 			transport_feedback_adpater.last_ack_seq_num_ = seq_num
 		}
