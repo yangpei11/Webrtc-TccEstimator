@@ -6,7 +6,7 @@ This is a Google's Transport-CC Implemention In go, which can be used to evaluat
 ## How to Use
 rtp_transport_controller_send.go provied some Interfaces.
 You can use Function **OnTransportFeedback** to get a bandwith from tcc algorithm, but you have to do three things to make sure the result correctly before. 
-1. First, you must input rtcp packet which is defined as **rtcp.Transport**. 
+1. First, you must input rtcp packet which is defined as **rtcp.TransportLayerCC**. 
 2. Second, When you receive **RR** Rtcp Packet, you should parse this packet to get **rtt** and **SetRtt**.
 3. When you send rtp packet, you must **AddPacket**.
 
