@@ -52,7 +52,11 @@ AcknowledgeBitrateEstimator calcalute a window flow bandwidth rate.
 ![TCC Rate](https://github.com/yangpei11/Transport-CC/blob/main/Figure/rate.png)
 
 ### TCC AND NoTCC
+* RTT
+![RTT](https://github.com/yangpei11/Transport-CC/blob/main/Figure/rtt.png)
 
+* LOST
+![LOST](https://github.com/yangpei11/Transport-CC/blob/main/Figure/lost.png)
 
 
 
