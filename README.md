@@ -49,7 +49,7 @@ AcknowledgeBitrateEstimator calcalute a window flow bandwidth rate.
 ## Comparing Results
 
 ### TCC Rate Control Chart
-![TCC Rate](https://github.com/yangpei11/Transport-CC/tree/main/Figure/tcc.png)
+![TCC Rate](https://github.com/yangpei11/Transport-CC/tree/main/Figure/rate.png)
 
 ### TCC AND NoTCC
 
