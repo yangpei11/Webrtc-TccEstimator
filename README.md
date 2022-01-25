@@ -58,5 +58,11 @@ AcknowledgeBitrateEstimator calcalute a window flow bandwidth rate.
 * LOST
 ![LOST](https://github.com/yangpei11/Transport-CC/blob/main/Figure/lost.png)
 
+### TCC AND REMB
+* RTT
+![RTT](https://github.com/yangpei11/Transport-CC/blob/main/Figure/rttCompare.png)
+
+* LOST
+![LOST](https://github.com/yangpei11/Transport-CC/blob/main/Figure/lostCompare.png)
 
 
