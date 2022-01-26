@@ -65,4 +65,3 @@ AcknowledgeBitrateEstimator calcalute a window flow bandwidth rate.
 * LOST
 ![LOST](https://github.com/yangpei11/Transport-CC/blob/main/Figure/lostCompare.png)
 
-
